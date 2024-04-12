@@ -1,0 +1,356 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    /* row for x axis and column for y axis*/
+    flex-direction: column;
+    /* Where the element will go on the page*/
+    justify-content: flex-start;
+    /* Center on the y axis */
+    align-content: stretch;
+    /* Extends the flex across completely*/
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.layout .bar-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(39, 39, 39);
+    height: 60px;
+    min-height: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgb(78, 78, 78);
+}
+
+.layout .bar-top .title { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    flex-grow: 8;
+
+}
+
+.layout .bar-top .account { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    flex-grow: 2;
+}
+
+.layout .bar-top .account p,
+.layout .bar-top .account img {
+    margin-right: 20px;
+} 
+
+.layout .body-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(48, 48, 48);
+    flex-grow: 1;
+}
+
+.layout .body-layout .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(22, 22, 22);
+    flex-grow: 1;
+    align-items: center;
+    max-width: 450px;
+    min-width: 450px;
+    border-right: 1px solid rgb(78, 78, 78);
+}
+
+.layout .body-layout .navigation .you-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(32, 32, 32);
+    height: 170px;
+    max-height: 170px;
+    width: 90%;
+    margin-top: 20px;
+    border-left: 2px solid rgb(136, 136, 136);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.layout .body-layout .navigation .library {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(32, 32, 32);
+    width: 90%;
+    margin-top: 20px;
+    flex-grow: 7;
+    max-height: 625px;
+    margin-bottom: 20px;
+    border-left: 2px solid rgb(136, 136, 136);
+    overflow-y: hidden;
+}
+
+.layout .body-layout .navigation .library .liked-songs {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.layout .body-layout .navigation .library .liked-songs img {
+    margin-left: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.layout .body-layout .navigation .library .liked-songs .data {
+    color: white;
+    margin-left: 20px;
+}
+
+.layout .body-layout .navigation .library .liked-songs .data .title {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.layout .body-layout .navigation .library .liked-songs .data .type {
+    margin-top: 10px;
+    color: rgb(196, 196, 196);
+}
+
+.layout .body-layout .navigation .library .liked-songs:hover {
+    cursor: pointer;
+}
+
+.layout .body-layout .navigation .library .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.layout .body-layout .navigation .library .search input {
+    border: none;
+    border-radius:  20px;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(22, 22, 22);
+    border: 2px solid black;
+}
+
+.layout .body-layout .navigation .library button {
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.layout .body-layout .navigation .library .search input::placeholder {
+    color: rgb(75, 75, 75);
+    padding-left: 10px;
+}
+
+.layout .body-layout .navigation .library:hover {
+    overflow-y: scroll;
+}
+
+.layout .body-layout .navigation a {
+    margin-right: 20px;
+}
+
+.layout .body-layout .navigation .icon-adjust {
+    font-size: 1rem;
+}
+
+.layout .body-layout .navigation button {
+    background-color: none;
+    border: none;
+    color: rgb(219, 219, 219);
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 40px;
+    border-radius: 3px;
+    background-color: rgb(32, 32, 32);
+    letter-spacing: .05rem;
+}
+
+.layout .body-layout .navigation button:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.layout .body-layout .content {
+    color: black;
+    flex-grow: 6;
+    padding: 15px 15px 15px 15px;
+}
+
+.layout .bar-top img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.layout .bar-top h1 {
+    margin-left: 10px;
+    color: rgba(65, 153, 235, 0.76);
+}
+
+.layout .body-layout .navigation h1 {
+    color: black;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.layout .body-layout .content .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    max-height: 800px;
+    min-height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(87, 87, 87);
+    overflow-y: scroll;
+}
+
+.layout .body-layout .content .profile .top-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-image: linear-gradient(rgb(93, 91, 255), rgb(130, 142, 245));
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    align-items: center;
+    color: white;
+}
+
+.layout .body-layout .content .profile .top-background .icon {
+    width: 200px;
+    height: 200px;
+    margin-left: 5%;
+    border-radius: 50%;
+}
+
+.layout .body-layout .content .profile .top-background .info {
+    margin-left: 3%;
+}
+
+.layout .body-layout .content .profile .top-background .info .profile-text {
+    font-size: 17px
+}
+
+.layout .body-layout .content .profile .top-background .info .display-name {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.layout .body-layout .content .profile .account-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: linear-gradient(rgb(68, 75, 141), rgb(46, 46, 46), rgb(14, 14, 14));
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-top: 2px solid white;
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist .top-artist-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist:hover {
+    overflow-x: scroll;
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist img {
+    border-radius: 50%;
+    
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist p {
+    margin-top: 10px;
+}
+
+.layout .body-layout .content .profile .account-body .top-artist-info .top-artist .artist {
+    color: rgb(196, 196, 196);
+}
+
+.layout .body-layout .content .profile .account-body .top-tracks-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+.layout .body-layout .content .profile .account-body .top-tracks-info table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-top: 1px solid white;
+}
+
+.layout .body-layout .content .profile .account-body .top-tracks-info td {
+    text-align: left;
+}
+
+.layout .body-layout .content .profile .account-body .top-tracks-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding-right: 0;
+}
+
+.layout .body-layout .content .profile .account-body .top-tracks-info .title-author {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,175 @@
+.layout {
+    display: flex;
+    /* row for x axis and column for y axis*/
+    flex-direction: column;
+    /* Where the element will go on the page*/
+    justify-content: flex-start;
+    /* Center on the y axis */
+    align-content: stretch;
+    /* Extends the flex across completely*/
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.layout .bar-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(236, 236, 236);
+    height: 60px;
+    align-items: center;
+    color: rgb(68, 68, 68);
+    border-bottom: 2px solid rgb(206, 206, 206);
+}
+
+.layout .bar-top .title { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(68, 68, 68);
+    flex-grow: 8;
+
+}
+
+.layout .bar-top .account { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(68, 68, 68);
+    flex-grow: 2;
+}
+
+.layout .body-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.layout .body-layout .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(218, 218, 218);
+    flex-grow: 1;
+    align-items: center;
+    max-width: 300px;
+    overflow-y: scroll;
+}
+
+.layout .body-layout .content {
+    color: black;
+    flex-grow: 6;
+    padding: 15px 15px 15px 15px;
+}
+
+.layout .bar-top img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.layout .bar-top h1 {
+    margin-left: 10px;
+    color: rgba(65, 153, 235, 0.76);
+}
+
+.layout .body-layout .navigation h1 {
+    color: black;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.comp h3 {
+    color: rgb(43, 43, 43);
+}
+
+.comp h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.comp h3 p {
+    color: black;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: rgb(207, 207, 207) solid 2px;
+    overflow-y: scroll;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.comp label {
+    color: white;
+    text-align: center;
+}
+
+.comp h3 img {
+    padding: 9px 9px;
+    border-radius: 10px;
+    border: rgb(207, 207, 207) solid 2px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.song_term_list {
+    float: inline-end;
+}
+
+.user-tracks-table-body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: .9rem;
+}
+
+.user-tracks-table-body table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.user-tracks-table-body table th {
+    padding: .75rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: .7rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.user-tracks-table-body table img {
+    width: 64px;
+    height: 64px;
+}
+
+.user-tracks-table-body table td {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.user-tracks-table-body table td a {
+    color: black;
+}
+
+.user-tracks-table-body table td a:hover {
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+
+.user-tracks-table-body table tr:nth-child(even) {
+    background-color: rgb(236, 236, 236);
+}
+
+.user-tracks-table-body table tr:nth-child(odd) {
+    background-color: rgb(241, 241, 241);
+}
